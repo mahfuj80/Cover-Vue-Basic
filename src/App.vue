@@ -1,7 +1,4 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-</script>
-
+<script setup></script>
 <template>
-  <RouterView />
+  <component :is="$route.meta.layout || 'div'"></component>
 </template>
