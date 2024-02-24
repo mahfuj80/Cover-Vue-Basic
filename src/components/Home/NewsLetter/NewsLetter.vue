@@ -1,5 +1,5 @@
 <template>
-  <section class="flex items-center h-screen bg-gray-100 font-poppins dark:bg-gray-800">
+  <section class="flex items-center bg-gray-100 font-poppins dark:bg-gray-800">
     <div class="justify-center flex-1 py-4 lg:py-10">
       <div
         class="relative bg-center bg-no-repeat bg-cover"
