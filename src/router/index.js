@@ -1,4 +1,5 @@
 import MainVue from '@/layouts/Main.vue'
+import Custom from '@/layouts/Custom.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
@@ -10,7 +11,22 @@ const router = createRouter({
       meta: {
         layout: MainVue
       },
-      component: () => import('../pages/Home/HomePage.vue')
+      component: () => import('../pages/Home/HomePage.vue'),
+      children: [
+        {
+          path: '/about',
+          name: 'about',
+          component: () => import('../pages/About/About.vue')
+        }
+      ]
+    },
+    {
+      path: '/product',
+      name: 'product',
+      meta: {
+        layout: Custom
+      },
+      component: () => import('../pages/Product/ProductDetails.vue')
     }
   ]
 })
